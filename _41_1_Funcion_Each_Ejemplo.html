@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+	<meta charset="UTF-8">
+	<title>Funcion Each en Ejemplo</title>
+	
+	<style>
+		h1{
+			text-align: center;
+		}
+
+		p{
+			font-size: 22px;
+			font-family: Verdana, Geneva, sans-serif;
+			text-align: justify;
+		}
+
+		#links{
+			width: 20%;
+			margin-left: 45px;
+			border: dashed #0000FF 2px;
+			float: left;
+			padding-bottom: 200px;
+			padding-left: 20px;
+		}
+
+		#links h2{
+			text-align: center;
+		}
+
+		#ultimos{
+			width: 70%;
+			float: left;
+		}
+
+		li{
+			font-weight: bold;
+			font-size: 20px;
+		}
+	</style>
+	<script type="text/javascript" src="Jquery/jquery-1.6.3.min.js">
+	</script>
+
+	<script type="text/javascript">
+		$(document).ready(
+			function(){
+				//Identificando a todas la etiquetas a
+				$("a[href^='https://']").each(function(){
+					//Para este vinculo capturar href
+					var linkExterno = $(this).attr("href");
+
+					//agregar link al contenedor
+					$("#links").append("<li>" + linkExterno + "</li>")
+				});
+			}
+		);
+
+		function cambiar(){
+		}
+	</script>
+</head>
+<body>
+	<h1>Utilizando la función Each</h1>
+
+	<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Id <a href="https://www.google.com">Google</a> omnis harum alias dicta dolor sapiente, quisquam voluptatem magni autem iste eaque blanditiis quos reiciendis minus, animi ipsam minima illum a.</p>
+
+	<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ipsum maxime aperiam, deleniti voluptas. Quisquam vero temporibus similique, placeat delectus ipsum quaerat suscipit vel ad aliquid facere, <a href="https://www.youtube.com">Youtube</a> tempora laborum provident distinctio?</p>
+
+	<div id="ultimos"><p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Impedit tenetur, fuga eius in, esse veniam, quo nisi nostrum quibusdam cumque obcaecati, adipisci. Quaerat expedita, at cum soluta eum placeat unde.</p>
+
+	<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Accusamus ipsum dignissimos culpa, quia possimus quibusdam mollitia veritatis hic autem a quisquam molestiae ipsam delectus sapiente maxime architecto quod velit! Numquam?</p>
+	
+	<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Consequuntur <a href="https://www.facebook.com">Facebook</a> suscipit est sint neque natus, odio aliquid deleniti tempore rem animi minus accusantium. Ipsam inventore ut, nisi, voluptatem possimus quisquam accusamus.</p>
+	</div>
+
+	<div id="links"><h2>Links utilizados</h2></div>
+</body>
+</html>

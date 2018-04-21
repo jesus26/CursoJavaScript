@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+	<meta charset="UTF-8">
+	<title>Programación Orientada a Objetos I</title>
+</head>
+<body>
+	<input type="button" id="button1">
+	<input type="button" id="button2">
+	<input type="button" id="button3">
+	<br>
+	<br>
+	<input type="text" id="nombre">
+
+	<script type="text/javascript">
+		//Obtener elementos de la hoja html y alamacenarlo en una variable.
+		var btnUno = document.getElementById("button1");
+		var btnDos = document.getElementById("button2");
+		var btnTres = document.getElementById("button3");
+		var txtNombre = document.getElementById("nombre");
+
+		//modificar ancho de los botones.
+		btnUno.style.width = "200px";
+		btnDos.style.width = "250px";
+		btnTres.style.width = "150px";
+
+		//modificar el alto
+		btnUno.style.height = "40px";
+		btnDos.style.height = "40px";
+		btnTres.style.height = "40px";
+
+		//Modificar el color
+		btnUno.style.background = "#F00";
+
+		//Poner el foco a un bjeto
+		btnDos.focus();
+
+		//Cambiar fondo al campo de texo.
+		txtNombre.style.background="blue";
+		
+		//manipular el valor del cuadro de texto
+		txtNombre.value = "Escriba su nombre";
+		txtNombre.style.color = "white";
+		
+		button1.value = "Botón 1";
+		button2.value = "Botón 2";
+		button3.value = "Botón 3";
+		
+		//Manipular el texto
+		txtNombre.style.height = "40px";
+	</script>
+</body>
+</html>

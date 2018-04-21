@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+	<meta charset="UTF-8">
+	<title>Diferncias de JQuery con el DOM</title>
+	<style type="text/css">
+		#anuncio{
+			background: #000;
+			color: #FFF;
+			font-size: 24px;
+		}
+	</style>
+</head>
+<body>
+	<!-- JQuery tiene 2 carcteristicas que lo diferencias de 
+	codigo JS tradicional al manejar el DOM.
+	- JQuery provee bucles automáticos.
+	- Funciones encadenadas, 
+	-->
+	
+	<!-- Se comentó con el fin de visualizar el ejemplo de el final
+	<div id="carrete">
+		<img src="img/vocho1.jpg" width="250" height="175">
+		&nbsp;
+		<img src="img/vocho1.jpg" width="250" height="175">
+		&nbsp;
+		<img src="img/vocho1.jpg" width="250" height="175">
+		&nbsp;
+		<img src="img/vocho1.jpg" width="250" height="175">
+	</div>
+	-->
+
+	<!-- Se comentó para hacerlo con JQuery
+	<script type="text/javascript">
+		//Identificar elemento de html.
+		//Query selector all, permite seleccionar los elementos que tenemos en un documento html con un selector css, regresa un array.
+
+		var imagenes = document.querySelectorAll("#carrete img"); //Seleccione todas las etiquetas img dentro del contenedor con id carrete.
+
+		//Recorrer el array desde el principio al final
+		for(var i = 0; i < imagenes.length; i++){
+			imagenes[i].style.visibility="hidden";
+		}
+		//Está al final para tener los elementos identificados
+	</script>
+	-->
+	
+	
+	<script type="text/javascript" src="Jquery/jquery-1.6.3.min.js"></script>
+	<!-- Mimso ejempo de arriba(ocultar imagenes) con JQuery
+	<script type="text/javascript">
+	//Para esperar a que carge la página
+		$(document).ready(function(){
+	 		$("#carrete img").hide();
+	 	});
+	</script>
+-->
+
+
+	<div id="anuncio">
+		¡PRUEBA!
+	</div>
+	<!--
+	<script type="text/javascript">
+		//Detectando elemento html
+		var anuncio = document.getElementById("anuncio");
+		anuncio.style.width = "500px";
+		anuncio.style.height = "500px";
+
+		//Cambiar texto del elemento
+		anuncio.innerHTML = "¡Vende!";
+	</script>
+	-->
+	<script type="text/javascript">
+		$(document).ready(function(){
+			//Utilizando Chained functions (funciones encadenadas)
+			$("#anuncio").width(500)
+			.height(500)
+			.text("¡Vende!")
+			.hide()
+			.fadeIn(10000);
+	 	});
+	</script>
+</body>
+</html>

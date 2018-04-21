@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+	<meta charset="UTF-8">
+	<title>Ejercicio de video 13 y 14</title>
+
+	<script>
+	//Convertir de string a entero
+		var numero1 = parseInt(prompt("Introduce el primer Número"));
+		var numero2 = parseInt(prompt("Introduce el segundo Número"));
+		
+		//typeof() permite saber que tipo de valor es una variable.
+		//alert(typeof(numero1));
+
+		//Saber si los números ingresados son numericos.
+		if(!isNaN(numero1) && !isNaN(numero2)){
+			var operacion = prompt("Elige una operacion (Suma, Resta, Multiplicación, División)").toLowerCase();
+
+			var resultado;
+
+			if(operacion == "suma"){
+				resultado = numero1 + numero2;
+			}else if(operacion == "resta"){
+				resultado = numero1 - numero2;
+			}else if(operacion == "multiplicacion" || operacion == "multiplicación"){
+				resultado = numero1 * numero2;
+			}else if(operacion == "division" || operacion == "división"){
+				resultado = numero1 / numero2;
+			}else{
+				resultado = "No valido";
+			}
+
+			alert("El resultado es " + resultado);
+		}else{
+			alert("No se pueden operar los valores ingresados");
+		}
+		
+	</script>
+</head>
+<body>
+	
+</body>
+</html>

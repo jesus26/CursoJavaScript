@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Eventos con JQuery II</title>
+
+	<style>
+		#images{
+			width: 1410px;
+			margin: auto;
+		}
+
+		img{
+			padding: 20px 30px;
+		}
+
+		#message{
+			position: absolute;
+			left: 412px;
+			top: 372px;
+			width: 581px;
+			height: 115px;
+			background-color: #FF9;
+			font-size: 24px;
+			font-weight: bold;
+			padding: 25px;
+			border: dotted 2px #00F;
+		}
+	</style>
+	
+	<script type="text/javascript" src="Jquery/jquery-1.6.3.min.js">
+	</script>
+
+	<script>
+		$(document).ready(function(){
+			//Hiding the message
+			$("#message").hide();
+
+			//Arguments, first: what function when pass the mouse over.
+			//second, what function when the mouse out.
+			//$("#img1").hover(message_on, message_off);
+
+			//Using anonymous functions
+			$("#img1").hover(function(){$("#message").show();}, function(){$("#message").hide();});
+		});
+
+		function message_on(){
+			$("#message").show();
+		}
+
+		function message_off(){
+			$("#message").hide();	
+		}
+	</script>
+</head>
+<body>
+	<div id="message">This is wathever message just to do test in JQuery</div>
+
+	<div id="images">
+		<img src="img/vocho1.jpg" id="img1">
+		<img src="img/vocho1.jpg" id="img2">
+		<img src="img/vocho1.jpg" id="img3">
+	</div>
+</body>
+</html>

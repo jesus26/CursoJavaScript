@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+	<meta charset="UTF-8">
+	<title>Cambiando Atributos CSS Con JQuery</title>
+
+	<script type="text/javascript" src="Jquery/jquery-1.6.3.min.js"></script>
+
+	<script>
+		$(document).ready(function{
+
+		});
+	</script>
+	
+	<style>
+		.destacaCursos{
+			background: #f00;
+		}
+
+		a{
+			display: block;
+			margin-bottom: 20px;
+			font-size: 24px;
+		}
+
+		table{
+			text-align: center;
+			border: none;
+		}
+
+		td{
+			border: none;
+		}
+
+		#contieneEnlaces{
+			position: absolute;
+			left: 31px;
+			top: 65px;
+			width: 400px;
+			height: 700px;
+			z-index: 1;
+			padding-top: 100px;
+		}
+	</style>
+
+	<script type="text/javascript" src="Jquery/jquery-1.6.3.min.js"></script>
+	<script type="text/javascript">
+		$(document).ready(function(){
+			/*
+			Para poder modificar tenemos 3 funciones
+			addClass() -- Agrega un estilo de clase,
+			toggleClass() -- proporciona un cmportamiento on/of a un elemento,
+			removeClass() -- quitar un estilo de clase que pueda tener un elemento.
+			*/
+			//Seleccionando a los elementos a cuyo atributo href inicio con el parametro, se le agrega una clase de estylo a través de la funcion de JQuery addClass
+			//$("a[href^='https://']").addClass("desatacaCursos");
+
+			//Identificand botones.
+			document.getElementById("cursos").addEventListener("click", destacarCursos, false);
+			document.getElementById("informacion").addEventListener("click", destacarEjemplos, false);
+		});
+
+		function destacarCursos(){
+			//Remover clase en caso de existir.
+			$(".ejemplos").removeClass("destacaCursos");
+
+			//Agregar clase CSS
+			$(".cursos").addClass("destacaCursos");
+		}
+
+		function destacarEjemplos(){
+			//Remover clase en caso de existir.
+			$(".cursos").removeClass("destacaCursos");
+
+			//Agregar clase CSS
+			$(".ejemplos").addClass("destacaCursos");
+		}
+
+	</script>
+</head>
+<body>
+	<div id="contieneEnlaces">
+	<a href="http://" class="cursos" targer="blank">Curso de AngularJS
+	</a>
+	<br>
+	<a href="" class="ejemplos" targer="blank">Google
+	<br>
+	<a href="https://" class="cursos" targer="blank">Curso de JavaScript
+	</a>
+	<br>
+	<a href="http://" class="ejemplos" targer="blank">Ejercios de Java
+	</a>
+	<br>
+	<a href="https://" class="cursos" targer="blank">Curso de MongoDB
+	</a>
+	<br>
+	<a href="" targer="blank">Articulo: Piensa como empresario</a>
+	</div>
+
+	<table width="100%" border="1">
+		<tr>
+			<td>
+				Cursos Destacados &nbsp;&nbsp;<input type="button" value="Cursos" id="cursos">
+			</td>
+			<td>
+				Información Adicional &nbsp;&nbsp;<input type="button" value="Información" id="informacion">
+			</td>
+		</tr>
+		
+	</table>
+</body>
+</html>

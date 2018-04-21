@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+	<meta charset="UTF-8">
+	<title>Agregando Contenido html con JQuery</title>
+
+	<style>
+		#errores{
+			background: #F0F;
+		}
+
+		#userName{
+			background: #333;
+		}
+	</style>
+
+	<script type="text/javascript" src="Jquery/jquery-1.6.3.min.js"></script>
+	<script type="text/javascript">
+		$(document).ready(function(){
+			//Ver el texto con etiquetas, se ve el contenido del contenedor con id errores
+			//alert($("#errores").html());
+
+			//Ver el texto sin etiquetas, profundizar a la hora de apuntar
+			//alert($("#errores h2").html());
+
+			//Sustituir un elemento
+			//($("#errores").html("<p>Hola soy un texto que sustituye</p>"));
+
+			//Agregar texto con happend, no sustituirlo
+			//apend agraga el texto justo después del contenido existente.
+			($("#errores").append("nos enseñan mucho"));
+
+			//Agregando texto con prepend.
+			//prepend agrega texto al inicio.
+			($("#errores").prepend("Los divinos"));
+
+			//Con los metodos before y after se puede agregar texto tambien, pero estos elementos toman como referencia al elemento eacto al que se está apuntando, es decir antes o después del contenedor errores
+			($("#errores").before("agregar texto con la funcion before"));
+			($("#errores").after("agregar texto con la funcion after"));
+
+			//La funcion text() funciona igual que la html() pero no es capaz de manejar etiquetas html, es decir no se pueden utilizar elementos html dentro del texto sustituto.
+			//($("#errores").text("<p>nos enseñan mucho</p>")); //no funciona
+			($("#errores").text("nos enseñan mucho")); //si funciona
+
+			$("#userName").before("Nombre: &nbsp;&nbsp;");
+			$("#userLastName").before("Apellido: &nbsp;&nbsp;");
+			$("#userAge").before("Edad: &nbsp;&nbsp;");
+
+		})
+		
+		function enviar(){
+				//reconociendo elemento
+				var name = document.getElementById("userName").value;
+				//Comparando que el elemento no esté vacío
+				if(name == ""){
+					//Imprimiendo mensaje 
+					$("#userName").after("&nbsp;&nbsp;Por favor llene este campo");
+				}
+			}
+	</script>
+</head>
+<body>
+	<!-- Se cuenta con 6 funciones, .html(), .text .after(), .append(), -prepend, .before() -->
+	<div id="contenedor">
+		<div id="errores">
+			<h2>Errores</h2>
+		</div>
+	</div>
+	<br>
+	<br>
+	<h3>De aqì empieza el ejercicio</h3>
+	<!-- Formulario de prueba(ejercicio del video) -->
+	<form method="get" id="miForm" id="miForm">
+		<input type="text" id="userName" name="userName">
+		<br>
+		<br>
+		<input type="text" id="userLastName" name="userLastName">
+		<br>
+		<br>
+		<input type="text" id="userAge" name="userAge">
+		<br>
+		<br>
+		<input type="button" value="Animo" onclick="enviar()">
+	</form>
+	<!-- -->
+	<!-- -->
+	<!-- -->
+	<!-- -->
+	<!-- -->
+</body>
+</html>

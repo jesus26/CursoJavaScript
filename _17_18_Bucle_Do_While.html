@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+	<meta charset="UTF-8">
+	<title>Bucle Do While</title>
+	<!-- El script está en el body para dibujar antes de comenzar a jugar-->
+</head>
+<body>
+	<table>
+		<tr>
+			<td>
+				<label for="textfield"></label>
+				<input type="text" name="textfield" id="txtMensaje">
+			</td>
+			<td>
+				<label for="textfield2"></label>
+				<input type="text" name="textfield2" id="txtIntentos">
+			</td>
+		</tr>
+	</table>
+
+	<script type="text/javascript">
+		//La única diferencia con el ciclo while es que se ejecuta al menos una vez.
+
+		//Declarando variable que se imprimirá
+		var variable = "Jesus";
+
+		//Declarando contador.
+		var contador = 0;
+		do{
+			contador++;
+			document.write(variable + "<br>");
+		}while(contador < 10);
+
+				//Declarando un array.
+		var misFrutasFavoritas = ["Fresas", "Uvas", "Mangos", "Sandia", "Mandarinas"];
+
+		//Contador para el indice del array.
+		var contadorFrtas = 0;
+
+		//Escribien salto de linea.
+		document.write("<br><br>");
+
+		//Recorriendo array con un ciclo do while
+		do{
+			document.write(misFrutasFavoritas[contadorFrtas] + ", ");
+			contadorFrtas++;
+		}while(contadorFrtas < misFrutasFavoritas.length);
+
+		//Declarando valor aleatorio utilizando math.
+		//El metodo round sirve para redondear un flotante.
+		var aleatorio = Math.round(Math.random() * 100);
+		//Para evitar que sea de 0 - 1 y mostrar de 0 - 100 lo multiplicamos por 100.
+
+		document.write(aleatorio);
+		
+		//Valor que ingresará el usuario.		
+		//var valorUsuario = parseInt(prompt("Introduce un número entre 0 y 100"));
+
+		//Contador de intentos para adivinar
+		var intentos = 0;
+
+		//Guardar el cuadro de texto en una variable
+		var mensaje = document.getElementById("txtMensaje");
+		var intentosConsumidos = document.getElementById("txtIntentos");
+		do{
+			if(aleatorio == valorUsuario){
+				mensaje.value = "Lo has conseguido";
+			}else if(aleatorio < valorUsuario){
+				mensaje.value = "Introduce número Menor";
+				mensaje.style.fontSize = "18px";
+			}else{
+				mensaje.value = "Introduce número Mayor";
+				mensaje.style.fontSize = "18px";
+			}
+			intentos++;
+
+			intentosConsumidos.value = intentos;
+			intentosConsumidos.style.fontSize = "18px";
+			intentosConsumidos.style.color = "red";
+			intentosConsumidos.style.textAlign = "Center";
+
+			valorUsuario = parseInt(prompt("Introduce un número"));
+
+		}while(valorUsuario != aleatorio);
+
+		mensaje.value = "Lo has conseguido";
+		mensaje.style.color = "green";
+		mensaje.style.fontSize = "18px";
+
+
+	</script>
+</body>
+</html>

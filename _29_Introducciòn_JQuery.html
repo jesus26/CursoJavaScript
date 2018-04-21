@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+	<meta charset="UTF-8">
+	<title>Introduccion a JQuery</title>
+	<link rel="stylesheet" href="css/estilo.css">
+</head>
+<body>
+	<h1>Hola Mundo</h1>
+	<p>
+		Bienvenidos a mejorar el aprendizaje a diario con JS <span>Aprendiendo Solo</span>
+	</p>
+	<img src="img/arbol.jpg" width="35%">
+	
+	<!-- JQuery es una librerìa de JavaScript que nos ayuda
+	en la creaciòn de tareas frecuentes
+	por ejemplo:
+	Seleccionar elementos, agregar nuevo contenido, ocultar y mostrar elementos de una web, validar formularios, efectos visuales
+	Caracteristicas de JQuery:
+	- Es pequeña, al rededor de 100 kb
+	- CSS "friendly"
+	- testeada ampliamente
+	- Gratis
+	- gran comunidad de soporte
+	- numerosos plugins de las tareas màs frecuentes.
+	 -->
+
+	 <!-- Para enlazar se puede enlazar desde un servidor o descargar y enlazar al archivo local
+	 google cdn jquery [latest] -->
+
+	 <!-- Agregando JQuery -->
+	 <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.0/jquery.min.js"></script>
+
+	 <!-- Lineas que le dicen a nuestra página olle espera q que carge -->
+	 <script>
+	 //Esta parte pone en espera a nuestro código web, en caso de estar al principio, se llama hasta que está cargada la página completamente
+	 	$(document).ready(function(){
+	 		//Efecto fadein
+	 		$("body").hide().fadeIn(3000);
+	 	});
+	 </script>
+</body>
+</html>

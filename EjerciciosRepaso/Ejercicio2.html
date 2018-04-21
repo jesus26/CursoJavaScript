@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+	<meta charset="UTF-8">
+	<title>Ejercicio 2</title>
+</head>
+<body>
+	<script type="text/javascript">
+		//. Que rellene un array con los 100 primeros números enteros y los muestre en pantalla en orden ascendente.
+		var miArray = [];
+
+		for(var i = 1; i <= 100; i++){
+			miArray[i] = i;
+		}
+
+		for(var i = 1; i < miArray.length; i++){
+			document.write(miArray[i] + ", ");
+		}
+
+		document.write("<br><br>Que rellene un array con los números primos comprendidos entre 1 y 100 y los muestre en pantalla en orden ascendente.<br><br>");
+
+		var numDivisores = 0; 
+		var j;
+		for(var i = 1; i <= 100; i++){
+			for(j = 1; j <= i; j++){
+				if((j%i) == 0){
+					numDivisores++;
+				}
+			}
+
+			if(numDivisores == 2){
+				document.write(i + ", ");
+				numDivisores = 0;
+			}
+		}
+	</script>
+</body>
+</html>

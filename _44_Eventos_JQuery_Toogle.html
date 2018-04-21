@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Evento Toogle</title>
+
+	<style>
+		#menu_principal{
+			width: 750px;
+			margin: auto;
+			margin-top: 100px;
+		}
+
+		li{
+			float: left;
+			width: 200px;
+			list-style: none;
+			margin: 0 10px;
+			text-align: center;
+			border: solid 2px #000;
+		}
+
+		li a{
+			border: 2px thin;
+			display: block;
+			font-size: 24px;
+			color: #FFF;
+			font-weight: bold;
+			padding: 10px 30px;
+			text-decoration: none;
+
+			/*background: -webkit-gredient(linear, left top, left bottom, color-stop(0%,#1e5788), color-stop(50%,#2989d8), color-stop(51%,#207cca), color-stop(100%,#7db9e8));*/
+		}
+
+		#submenu1{
+			position: absolute;
+			left: 308px;
+			top: 137px;
+			width: 200px;
+			height: 120px;
+			z-index: 1;
+		}
+
+		#submenu1 a{
+			/*background: -moz-gredient(linear, left top, left bottom, color-stop(top, #58b724 0%, #6fd868 51%, #ace2b8 100%);*/
+		}
+	</style>
+	
+	<script type="text/javascript" src="Jquery/jquery-1.6.3.min.js">
+	</script>
+
+	<script>
+		$(document).ready(function(){
+			$("#submenu1").hide();
+
+			$("#archivo").toggle(muestra_menu, oculta_menu);
+		});
+
+		function muestra_menu(){
+			$("#submenu1").show();
+		}
+
+		function oculta_menu(){
+			$("#submenu1").hide();
+		}
+	</script>
+</head>
+<body>
+	<div id="submenu1">
+		<ul>
+			<li id="opcion1"><a href="#">Opción 1</a>
+				
+			</li>
+			<li id="opcion2"><a href="#">Opción 2</a>
+				
+			</li>
+			<li id="opcion3"><a href="#">Opción 3</a>
+				
+			</li>
+		</ul>
+	</div>
+
+	<div id = "menu_principal">
+		<ul>
+			<li id="archivo"> <a href="#">Archivo</a></li>
+			<li><a href="#">Edicion</a></li>
+			<li><a href="#">Herramientas</a></li>
+		</ul>
+	</div>
+</body>
+</html>

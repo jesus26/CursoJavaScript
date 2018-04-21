@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+	<meta charset="UTF-8">
+	<title>Eliminando y Reemplazando con JQuery</title>
+	<style>
+		img{
+			float: left;
+			margin: 15px;
+			height: 250px;
+			width: 250px;
+			border-radius: 10px;
+		}
+
+		#banner{
+			background: #f3f;
+			height: 300px;
+			width: 300px;
+			position: absolute;
+			left: 400px;
+			top: 200px;
+			text-align: center;
+		}
+
+		#cerrar{
+			font-size: 36px;
+		}
+
+		#img1, #img2, #img3, #img4{
+			background: #eff;
+			font-size: 30px;
+			text-align: center;
+			float: left;
+			width: 250px;
+			height: 250px;
+		}
+	</style>
+
+	<script type="text/javascript" src="Jquery/jquery-1.6.3.min.js"></script>
+	<script type="text/javascript">
+		$(document).ready(function(){
+			document.getElementById("cerrar").addEventListener("click", cerrarBanner, false);
+
+			//Agegando el listener a todas la imagenes
+			var imagen = document.querySelectorAll("#carrete img");
+
+			//recorriendo arry de imagenes.
+			for(var i = 0; i < imagen.length; i++){
+				imagen[i].addEventListener("click",agregarCarro, false);
+			}
+		});
+
+		function cerrarBanner(){
+			$("#banner").remove();
+		}
+
+
+		//El parametro es el objeto de elemento, se produce cuando el usuario presina una imagen.
+		function agregarCarro(num){
+			//Saber que objeto ha desencadenado el elemento[img1, omg2, etc]
+			if(num.target == img1){
+				$("#img1").replaceWith("<p id='img1'>El producto ha sido agregado</p>");
+			}else if(num.target == img2){
+				$("#img2").replaceWith("<p id='img2'>El producto ha sido agregado</p>");
+			}else if(num.target == img3){
+				$("#img3").replaceWith("<p id='img3'>El producto ha sido agregado</p>");
+			}else{
+				$("#img4").replaceWith("<p id='img4'>El producto ha sido agregado</p>");
+			}
+			
+		}
+	</script>
+</head>
+<body>
+	<div id="banner">
+		Soy un banner
+		<p id="cerrar">Cerrar</p>
+	</div>
+	<div id="carrete">
+		<img src="img/vocho1.jpg" id="img1">
+		<img src="img/vocho1.jpg" id="img2">
+		<img src="img/vocho1.jpg" id="img3">
+		<img src="img/vocho1.jpg" id="img4">
+	</div>
+</body>
+</html>

@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+	<meta charset="UTF-8">
+	<title>Cambair Atributos de HTML II</title>
+	<style>
+		#contenedor1{
+			position: absolute;
+			left: 70px;
+			top: 180px;
+			width: 410px;
+			height: 300px;
+			z-index: 1;
+		}
+
+		#contenedor2{
+			position: absolute;
+			left: 515px;
+			top: 180px;
+			width: 450px;
+			height: 300px;
+			z-index: 2;
+		}
+
+		ul{
+			list-style: none;
+		}
+
+		li{
+			margin: 10px auto;
+			font-size: 24px;
+			width: 95px;
+		}
+
+		.destaca{
+			background-color: #F00;
+			color: #FFF;
+		}
+	</style>
+	<script type="text/javascript" src="Jquery/jquery-1.6.3.min.js"></script>
+
+	<script>
+		$(document).ready(function(){
+			//Obteniendo elementos de la lista
+			var elementos = document.querySelectorAll("li");
+
+			//Asignar escucha a los elementos
+			for(var i = 0; i < elementos.length; i ++){
+				elementos[i].addEventListener("mouseover", showImage, false);
+
+				elementos[i].addEventListener("mouseout", hideImage, false);
+			}
+		});
+
+		function showImage(e){
+			//comparando objeto con id del elemnto
+			if(e.target == img1){
+				$("#img1").addClass("destaca");
+
+				$("img").attr("src", "img/vocho1.jpg");
+			}else if(e.target == img2){
+				$("#img2").addClass("destaca");
+
+				$("img").attr("src", "img/vocho1.jpg");
+			}else if(e.target == img3){
+				$("#img3").addClass("destaca");
+
+				$("img").attr("src", "img/vocho1.jpg");
+			}else{
+				$("#img4").addClass("destaca");
+
+				$("img").attr("src", "img/vocho1.jpg");
+			}
+		}
+
+		function hideImage(e){
+			//comparando objeto con id del elemnto
+			if(e.target == img1){
+				$("#img1").removeClass("destaca");
+
+				$("img").removeAttr("src");
+			}else if(e.target == img2){
+				$("#img2").removeClass("destaca");
+
+				$("img").removeAttr("src");
+			}else if(e.target == img3){
+				$("#img3").removeClass("destaca");
+
+				$("img").removeAttr("src");
+			}else{
+				$("#img4").removeClass("destaca");
+
+				$("img").removeAttr("src");
+			}
+		}
+	</script>
+</head>
+<body>
+	<div id="contenedor1">
+		<ul>
+			<li id="img1">Imagen 1</li>
+			<li id="img2">Imagen 2</li>
+			<li id="img3">Imagen 3</li>
+			<li id="img4">Imagen 4</li>
+		</ul>
+	</div>
+
+	<div id="contenedor2">
+		<img src="">
+	</div>
+</body>
+</html>

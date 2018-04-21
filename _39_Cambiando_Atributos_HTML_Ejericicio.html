@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Cambiando Atributos HTML I Ejercicio</title>
+	<style>
+		img{
+			width: 300px;
+			height: 300px;
+		}
+	</style>
+
+		<script type="text/javascript" src="Jquery/jquery-1.6.3.min.js"></script>
+
+		<script>
+			$(document).ready(function(){
+
+				var imagenes = document.querySelectorAll("img");
+
+				for(var i = 0; i < imagenes.length; i++){
+					imagenes[i].addEventListener("mouseover", changeImage, false);
+
+					imagenes[i].addEventListener("mouseout", backImage, false);
+				}
+			});
+
+			function changeImage(e){
+				if(e.target == img1){
+					$("#img1").attr("src", "img/arbol.jpg");
+				}else if(e.target == img2){
+					$("#img2").attr("src", "img/arbol.jpg");
+				}else if(e.target == img3){
+					$("#img3").attr("src", "img/arbol.jpg");
+				}else{
+					$("#img4").attr("src", "img/arbol.jpg");
+				}
+				
+			}
+
+			function backImage(e){
+				if(e.target == img1){
+					$("#img1").attr("src", "img/vocho1.jpg");
+				}else if(e.target == img2){
+					$("#img2").attr("src", "img/vocho1.jpg");
+				}else if(e.target == img3){
+					$("#img3").attr("src", "img/vocho1.jpg");
+				}else{
+					$("#img4").attr("src", "img/vocho1.jpg");
+				}
+				
+			}
+		</script>
+
+</head>
+<body>
+	<img src="img/vocho1.jpg" id="img1">
+	<img src="img/vocho1.jpg" id="img2">
+	<img src="img/vocho1.jpg" id="img3">
+	<img src="img/vocho1.jpg" id="img4">
+</body>
+</html>

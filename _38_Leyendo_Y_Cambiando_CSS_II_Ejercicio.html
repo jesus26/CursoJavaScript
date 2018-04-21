@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+	<meta charset="UTF-8">
+	<title>Leyendo y Cambiando Atributos CSS II Ejercicio</title>
+
+	<style type="text/css">
+		h1{
+			text-align: center;
+		}
+
+		div{
+			width: 15%;
+			margin: 0 100px;
+			float: left;
+			border: #F00 solid 2px;
+			padding: 10px;
+		}
+
+		table{
+			width: 100%;
+			margin-top: 10px;
+		}
+	</style>
+
+	<script type="text/javascript" src="Jquery/jquery-1.6.3.min.js"></script>
+
+	<script type="text/javascript">
+		$(document).ready(function(){
+			var botones = document.querySelectorAll("input")
+
+			//Recorrer array para poner botones a la escucha
+			for(var i = 0; i < botones.length; i++){
+				botones[i].addEventListener("click", modoLectura, false);
+			}
+
+		});
+
+		//Pasarle el objeto del evento que se contruye de forma automática, se suele llamar e a los objetos de tipo eventos
+		function modoLectura(e){
+			var zonaActuacion;
+
+			//Comparar que objeto desencadena el evento
+			if(e.target == lectura1){
+				zonaActuacion = "#noticia1";
+			}else if(e.target == lectura2){
+				zonaActuacion = "#noticia2";
+			}else if(e.target == lectura3){
+				zonaActuacion = "#noticia3";
+			}
+
+			$(zonaActuacion).css({"background-color" : "#000", 
+				"font-size" : "20px", 
+				"text-align" : "justify",
+				"color" : "#FFF"});
+		}
+
+	</script>
+</head>
+<body>
+<h1>NOTICIAS</h1>
+<div id="noticia1">
+	Lorem ipsum dolor sit amet, consectetur adipisicing elit. Harum voluptatem rem aperiam excepturi pariatur amet ipsam esse. Neque hic numquam nihil debitis delectus commodi tempora totam rerum rem? Necessitatibus, itaque!
+	<table>
+		<tr>
+			<td style="text-align:left">
+				<input type="button" value="Modo Lectura" id="lectura1">
+			</td>
+		</tr>
+	</table>
+</div>
+<div id="noticia2">
+	Lorem ipsum dolor sit amet, consectetur adipisicing elit. Harum voluptatem rem aperiam excepturi pariatur amet ipsam esse. Neque hic numquam nihil debitis delectus commodi tempora totam rerum rem? Necessitatibus, itaque!
+	<table>
+		<tr>
+			<td style="text-align:left">
+				<input type="button" value="Modo Lectura" id="lectura2">
+			</td>
+		</tr>
+	</table>
+</div>
+<div id="noticia3">
+	Lorem ipsum dolor sit amet, consectetur adipisicing elit. Harum voluptatem rem aperiam excepturi pariatur amet ipsam esse. Neque hic numquam nihil debitis delectus commodi tempora totam rerum rem? Necessitatibus, itaque!
+	<table>
+		<tr>
+			<td style="text-align:left">
+				<input type="button" value="Modo Lectura" id="lectura3">
+			</td>
+		</tr>
+	</table>
+</div>
+
+</body>
+</html>

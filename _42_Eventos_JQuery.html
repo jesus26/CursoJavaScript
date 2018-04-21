@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Eventos en JQuery</title>
+	
+	<style>
+		h1{
+			text-align: center;
+		}
+
+		body{
+			background-color: #334873;
+			color: #FFF;
+		}
+
+		#principal{
+			width: 60%;
+			margin: auto;
+		}
+
+		a{
+			color: #FFF;
+			font: bold 20px Verdana, Geneva;
+		}
+	</style>
+
+	<script type="text/javascript" src="Jquery/jquery-1.6.3.min.js">
+	</script>
+
+	<script>
+		/*Evento.- Desencadenante de una acción.
+		Eventos más utilizados: De reton; click, dblclick, mousedown(se deja pulsado el boton izquierdo del raton), mouseup(se desencadena al dejar de pulsar el botón), mouseover, mouseout, mousemove, De teclado: keypress, keydown, Eventos de documento o ventan: load, resize, scroll, unload, Eventos de formulario: submit, reset, change, focus, blur(cuando el formulario o un elemento piede el foco)*/
+
+		/*Podemos utilizar una función de diferentes formas por ejemplo: 
+
+		$("img").click(aviso)
+
+		function aviso(){
+			alert("Se ha presionado la imagen")
+		}
+
+		Otra forma es utilizando funciones anónimas
+		$("img").click(function(){
+			alert("Se ha presionado la imagen")
+		})
+
+		NOTA: Al llamar a una funcion no se le agregan los parentesis.
+		*/
+
+		//add ready function
+		$(document).ready(function(){
+			//Adding event to the page
+			$("html").dblclick(function(){
+				alert("Auch");
+			});
+
+			//Adding an event to the link
+			$("a").mouseover(function(){
+				var message = "<p>The mouse has passed over the link </p>";
+
+				//adding the texto to the html page
+				$("#main").append(message);
+			});
+
+			$("#myButton").click(function(){
+				//Change the button text
+				$(this).val("Please don't touch me!!!")
+			});
+
+			$("#myField").focus(function(){
+				$(this).val("Now write here");
+			});
+		});
+	</script>
+</head>
+<body>
+	<div id="main">
+		<h1>Introduction to Events</h1>
+
+		<p>
+			<a href="#">This is a link</a>
+		</p>
+
+		<form action="#" method="get">
+			<fieldset>
+				<legend>
+					Form
+				</legend>
+				<p>
+					<input type="button" name="button" id="myButton" value="Press">
+				</p>
+				<p>
+					<input type="text" name="textField" id="myField">
+				</p>
+			</fieldset>
+		</form>
+	</div>
+</body>
+</html>

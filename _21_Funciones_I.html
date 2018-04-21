@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+	<meta charset="UTF-8">
+	<title>Funciones I</title>
+	<style type="text/css">
+		.centrado{
+			text-align: center;
+		}
+	</style>
+	<script type="text/javascript">
+		//Funcion: Ordenes que el navegador almacenará y estarán disponible en cualquier momento.
+		//Sintaxis: function nombreFuncion(){}
+
+		//En otro punto se llaman las funciones nombreFuncion(); , si no se llaman jamás se ejecutan.
+
+		//Funcion para sacar el día de hoy.
+		function diaDeHoy(){
+			//Variabe que contendrá el día de hoy.
+			var hoy = new Date();
+			document.write(hoy.toDateString());
+		}
+	</script>
+</head>
+<body>
+	<h1 class="centrado"><strong>¿Y qué día es hoy?</strong></h1>
+	<p>Hoy es día: 
+		<script>
+			//Llamando funcion.
+			diaDeHoy();
+		</script> 
+	</p>
+	<br>
+	<p>Ya se ha dicho que hoy es día: 
+		<script>
+			//Llamando funcion.
+			diaDeHoy();
+		</script> 
+	</p>
+</body>
+</html>

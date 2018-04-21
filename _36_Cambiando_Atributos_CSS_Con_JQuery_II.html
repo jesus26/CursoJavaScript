@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+	<meta charset="UTF-8">
+	<title>Cambiando Atributos CSS Con JQuery</title>
+
+	<script type="text/javascript" src="Jquery/jquery-1.6.3.min.js"></script>
+
+	<script>
+		$(document).ready(function{
+
+		});
+	</script>
+	
+	<style>
+		.destacaCursos{
+			color: #f00;
+			margin-left: 30px;
+			font-size: 35px;
+		}
+
+		a{
+			display: block;
+			margin-bottom: 20px;
+			font-size: 24px;
+		}
+
+		table{
+			text-align: center;
+			border: none;
+		}
+
+		td{
+			border: none;
+		}
+
+		#contieneEnlaces{
+			position: absolute;
+			left: 31px;
+			top: 65px;
+			width: 400px;
+			height: 700px;
+			z-index: 1;
+			padding-top: 100px;
+		}
+	</style>
+
+	<script type="text/javascript" src="Jquery/jquery-1.6.3.min.js"></script>
+	<script type="text/javascript">
+		$(document).ready(function(){
+			document.getElementById("cursos").addEventListener("click", destacarCursos, false);
+			document.getElementById("informacion").addEventListener("click", destacarEjemplos, false);
+		});
+
+		function destacarCursos(){
+			/*$(".ejemplos").removeClass("destacaCursos");
+			$(".cursos").addClass("destacaCursos");*/
+			//utilizando funcion on/off
+			$(".cursos").toggleClass("destacaCursos");
+		}
+
+		function destacarEjemplos(){
+			/*$(".cursos").removeClass("destacaCursos");
+			$(".ejemplos").addClass("destacaCursos");*/
+			$(".ejemplos").toggleClass("destacaCursos");
+		}
+
+	</script>
+</head>
+<body>
+	<div id="contieneEnlaces">
+	<a href="http://" class="cursos" targer="blank">Curso de AngularJS
+	</a>
+	<br>
+	<a href="" class="ejemplos" targer="blank">Google
+	<br>
+	<a href="https://" class="cursos" targer="blank">Curso de JavaScript
+	</a>
+	<br>
+	<a href="http://" class="ejemplos" targer="blank">Ejercios de Java
+	</a>
+	<br>
+	<a href="https://" class="cursos" targer="blank">Curso de MongoDB
+	</a>
+	<br>
+	<a href="" targer="blank">Articulo: Piensa como empresario</a>
+	</div>
+
+	<table width="100%" border="1">
+		<tr>
+			<td>
+				Cursos Destacados &nbsp;&nbsp;<input type="checkbox" value="Cursos" id="cursos">
+			</td>
+			<td>
+				Información Adicional &nbsp;&nbsp;<input type="checkbox" value="Información" id="informacion">
+			</td>
+		</tr>
+		
+	</table>
+</body>
+</html>

@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+	<meta charset="UTF-8">
+	<title>Funcion Each y Funciones Anonimas</title>
+	
+	<style>
+		img{
+			margin: 0 10px;
+			width: 30%;
+		}
+
+		#contenedor{
+			width: 85%;
+			margin: auto;
+		}
+	</style>
+	<script type="text/javascript" src="Jquery/jquery-1.6.3.min.js">
+	</script>
+
+	<script type="text/javascript">
+		/*Funcion each
+			se utilizan funciones encadenadas
+			actua sbre todas las etiquetas img
+			$("img").fadeOut(1000).fadeIn(1000).width("120");
+
+			con la funcion each se puede realizar lo mismo pero estas utilizan funciones anónimas como parametros.
+
+			El ejemplo de arriba con la funcion each()
+			$("img").each(function(){
+				$(this).fadeOut(1000).fadeIn(1000).width("120");
+			});
+
+			Una funcion anonima no tiene nombre y se ejecuta en cuanto se encuentre el código al contrario de las no anom¿nimas que se ejecutan hasta que se mandan llamar, se suelen utilizar como argumentos de otras funciones.
+
+			se utilizan cuando se quieren aplicar varias tareas a un miso objeto y las tareas necesitan declarar variables, bucles, condicionales, etc
+
+			Objeto this: hace referenci a "este" refiriendose al objeto en selección.
+		*/
+
+		$(document).ready(
+			function(){
+				document.getElementById("miBoton").addEventListener("click", cambiar, false);			
+			}
+		);
+function
+		 cambiar(){
+			//Funciones encadenadas
+			$("img").fadeOut(1000).fadeIn(1000).width("310");
+
+			//Funcion each
+			$("img").each(function(){
+				$(this).fadeOut(1000).fadeIn(1000).width("310");
+			});
+		}
+	</script>
+</head>
+<body>
+	<div id="contenedor">
+		<img src="img/vocho1.jpg">
+		<img src="img/vocho1.jpg">
+		<img src="img/vocho1.jpg">
+	</div>
+
+	<!-- Al presionar este botón se harán los efectos mencionados al principio -->
+	<div id="boton">
+		<input type="button" id="miBoton" value="Accion">		
+	</div>
+</body>
+</html>

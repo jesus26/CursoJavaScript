@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+	<meta charset="UTF-8">
+	<title>Paso De Parametro</title>
+
+	<script>
+		function miNombre(nombre){
+			document.write(nombre);
+		}
+
+		//Pedir nombre del usuario.
+		var nombre = prompt("Ingresa tu nombre");
+	</script>
+</head>
+<body>
+	<p>Hola Bienvenido: 
+		<script>
+			miNombre(nombre);
+		</script></p>
+	<br>
+	<p>
+		Muchas gracias 
+		<script>
+		miNombre(nombre);
+		</script> 
+		vuelve pronto :)
+	</p>
+</body>
+</html>

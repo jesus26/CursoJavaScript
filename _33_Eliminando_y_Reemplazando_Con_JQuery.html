@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+	<meta charset="UTF-8">
+	<title>Eliminando y Reemplazando con JQuery</title>
+	<style>
+		img{
+			float: left;
+			margin: 15px;
+			height: 250px;
+			width: 250px;
+			border-radius: 10px;
+		}
+
+		#banner{
+			background: #f3f;
+			height: 300px;
+			width: 300px;
+			position: absolute;
+			left: 400px;
+			top: 200px;
+			text-align: center;
+		}
+
+		#cerrar{
+			font-size: 36px;
+		}
+
+		#nuevoMensaje{
+			background: #eff;
+			font-size: 30px;
+			text-align: center;
+			float: left;
+			width: 250px;
+			height: 250px;
+		}
+	</style>
+
+	<script type="text/javascript" src="Jquery/jquery-1.6.3.min.js"></script>
+	<script type="text/javascript">
+		//Funciones para eliminar o reemplazar, remove(), replaceWith()
+		$(document).ready(function(){
+			//Identificar elemento
+			/*var a = document.getElementById("cerrar");
+			a.addEventListener("click", cerrarBanner, false);*/
+
+			//Funciones encadenadas
+			document.getElementById("cerrar").addEventListener("click", cerrarBanner, false);
+
+			//identificando imagen.
+			document.getElementById("img1").addEventListener("click", agregarCarro, false);
+		});
+
+		//Crear funcion
+		function cerrarBanner(){
+			//Eliminando un elemento
+			$("#banner").remove();
+		}
+
+		function agregarCarro(){
+			//Reemplazando imagen por un texto.
+			$("#img1").replaceWith("<p id='nuevoMensaje'>El producto ha sido agregado</p>");
+		}
+	</script>
+</head>
+<body>
+	<div id="banner">
+		Soy un banner
+		<p id="cerrar">Cerrar</p>
+	</div>
+	<div id="carrete">
+		<img src="img/vocho1.jpg" id="img1">
+		<img src="img/vocho1.jpg" id="img2">
+		<img src="img/vocho1.jpg" id="img3">
+		<img src="img/vocho1.jpg" id="img4">
+	</div>
+</body>
+</html>

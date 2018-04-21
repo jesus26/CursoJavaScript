@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+	<meta charset="UTF-8">
+	<title>Estructurasde flujo, condicionales, bucles I,II y III</title>
+	<style>
+		table{
+			margin: auto;
+		}
+	</style>
+	<script type="text/javascript">
+		/*Operadores de comparación
+		=== estrictamente igual comparando tipos,
+		!== estrictamente diferente con tipos.
+		*/
+		var precioCoche = 250000;
+
+		var dineroAhorrado = prompt("Introduce cuanto dinero tienes");
+
+		var edad = prompt("Introduce cuantos años tienes");
+
+		if(dineroAhorrado >= precioCoche && edad >= 18){
+			alert("Puedes comprar el coche");
+		}else{
+			alert("Aún no puedes, pero seguro pronto lo harás!");
+		}
+	</script>
+</head>
+<body id="cuerpo">
+	<table width="25%" border="1" id="miTabla">
+		<tr>
+			<td>
+				Nombre:
+			</td>
+			<td>
+				<label for="textfield"></label>
+				<input type="text" name="textfield" id="textfield">
+			</td>
+		</tr>
+
+		<tr>
+			<td>
+				Apellidos::
+			</td>
+			<td>
+				<label for="textfield2"></label>
+				<input type="text" name="textfield2" id="textfield2">
+			</td>
+		</tr>
+
+		<tr>
+			<td>
+				Edad:
+			</td>
+			<td>
+				<label for="textfield3"></label>
+				<input type="text" name="textfield3" id="textfield3">
+			</td>
+		</tr>
+
+		<tr>
+			<td>
+				Carnet:
+			</td>
+			<td>
+				<label for="textfield4"></label>
+				<input type="text" name="textfield4" id="textfield"4>
+			</td>
+		</tr>
+
+		<tr>
+			<td>
+				<input type="submit" name="button" id="button" value="Enviar">
+			</td>
+			<td>
+				<input type="reset" name="button2" id="button2" value="Resetear">
+			</td>
+		</tr>
+	</table>
+
+	<!-- Se crea el JavaScript aquí para casos de mantenimiento, no puede leer el documento algo que no ha pasado-->
+	<script>
+		var cuerpo = document.getElementById("cuerpo");
+
+		var colorWeb=prompt("Introduce un color [Rojo | Verde | Azul]").toLowerCase();
+
+		if(colorWeb == "rojo"){
+			cuerpo.style.background = "red";
+		}else if(colorWeb == "verde"){
+			cuerpo.style.background = "green";
+		}else if(colorWeb == "azul"){
+			cuerpo.style.background = "blue";
+		}else{
+			alert("Los colores disponibles son; rojo, verde y azul");
+		}
+	</script>
+</body>
+</html>

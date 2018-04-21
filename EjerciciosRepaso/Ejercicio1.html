@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+	<meta charset="UTF-8">
+	<title>Ejercicio 1</title>
+	<style>
+		body{
+			background-color: #79E5A8;	
+		}
+		h1{
+/*			background-color: #000;*/
+			background: -webkit-linear-gradient(top, #00F, #3FF);
+			margin: 10px auto;
+			width: 300px;
+			border-radius: 10px;
+			padding: 15px;
+			color: #FFF;
+			text-align: center;;
+		}
+
+		#mainImage{
+			background-color: #FFC335;
+			float: left;
+			border-radius: 10px;
+			margin-left: 280px;
+		}
+
+		img{
+			border-radius: 15px;
+			padding: 5px;
+
+		}
+
+		#form{
+			margin: 0 auto;
+			padding-left: 10px;
+			text-align: center;
+			padding-top: 80px;
+		}
+	</style>
+
+	<script type="text/javascript" src="jquery-1.6.3.min.js"></script>
+	<script type="text/javascript">
+
+		function PageName(){
+			var name;
+			var secondName;
+			name = document.getElementById("name");
+			secondName = document.getElementById("secondName");
+
+			var completeName = document.getElementById("completeName");
+			completeName.value = name.value + " " + secondName.value;
+		}
+
+		function Reset(){
+			var name;
+			var secondName;
+			name = document.getElementById("name");
+			secondName = document.getElementById("secondName");
+
+			var completeName = document.getElementById("completeName");
+			completeName.value = ""
+			name.value = "";
+			secondName.value = "";	
+		}
+
+		function increase(){
+			var imgMain = document.getElementById("imgMain");
+
+			imgMain.style.width = "350px";
+			imgMain.style.height = "350px";
+		}
+
+		function dicrease(){
+			var imgMain = document.getElementById("imgMain");
+
+			imgMain.style.width = "300px";
+			imgMain.style.height = "300px";	
+		}
+
+		//Utilizando Jquery
+		$(function(){
+			//Aparecer body con efecto de desvanecer
+			$("body").hide().fadeIn(3000);
+		}
+		);
+
+	</script>
+
+</head>
+<body>
+	<header id="mainTitle">
+		<h1>EJERCICIO 1</h1>
+	</header>
+	<br>
+	<section>
+		<p id="mainImage">
+			<img src="img/ball.jpg" id="imgMain" onmouseover="increase();" onmouseout="dicrease();">
+		</p>
+		
+		<div id="form">
+			<label for="name">Nombre: </label>
+			<input type="text" placeholder="nombre" id="name" name="name">
+			<br>
+			<br>
+			<label for="secondName">Apellido: </label>
+			<input type="text" placeholder="apellido" id="secondName" name="secondName">
+			<br>
+			<br>
+			<input type="button" value="Pegar nombre" name="page" id="page" onclick="PageName();">
+			&nbsp;&nbsp;&nbsp;&nbsp;
+			<input type="button" value="Resetear" name="reset" id="reset" onclick="Reset();">
+			<br>
+			<br>
+			<label for="completeName">Nombre: </label>
+			<input type="text" placeholder="nombre" id="completeName" name="completeName">
+		</div>
+	</section>
+
+</body>
+</html>

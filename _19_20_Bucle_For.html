@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+	<meta charset="UTF-8">
+	<title>Ciclo For</title>
+
+	<script type="text/javascript">
+		//Declarando variable que se imprimira.
+		var variable = "Jesus";
+
+		//Utilizando el ciclo for.
+		//i puede ir ascendiendo o descendiendo.
+		for(var i = 0; i < 10; i++){
+			document.write(variable + "<br>");
+		}
+
+		//Declarando array para recorrer con un ciclo for.
+		var misPasatiempos = ["Caminar por el parque", "Programar", "Jugar football", "Ver el footbol en vivo", "Pasear en bicicleta", "Nadar", "Ver freestyle de football", "Ver freestyle de rap"];
+
+		//Haciendo salto de linea.
+		document.write("<br><br>");
+
+		//Recorriendo array con for.
+		for(var i = 0; i < misPasatiempos.length; i++){
+			document.write(misPasatiempos[i] + ", ");
+		}
+
+		//Declarar un array indeterminado, no le decimos cuantos elementos va a acontener.
+		var arrayIndeterminado = new Array();
+
+		//Variable que tendrá el valor que el usuario ingrese
+		var valorArrayIndeterminado;
+
+		//Contador que funcionará como el indice.
+		var contador = 0;
+
+		//Metiendo valores al array mediante un ciclo while
+		while(valorArrayIndeterminado != "ya"){
+			valorArrayIndeterminado = prompt("Ingresa las cosas que te gustan [Ya] para terminar");
+
+			arrayIndeterminado[contador] = valorArrayIndeterminado;
+
+			contador++;
+		}
+
+		//Haciendo salto de linea.
+		document.write("<br><br>");
+
+		//Eliminar el ultimo elemento que termina el ciclo de llenado.
+		arrayIndeterminado.pop();
+
+		//Recorrer array indeterminado con ciclo for.
+		for(var i = 0; i < arrayIndeterminado.length; i++){
+			document.write(arrayIndeterminado[i] + ", ");
+		}
+	</script>
+</head>
+<body>
+	
+</body>
+</html>

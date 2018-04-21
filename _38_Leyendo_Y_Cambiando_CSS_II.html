@@ -1,0 +1,152 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+	<meta charset="UTF-8">
+	<title>Leyendo y Cambiando Atributos CSS II</title>
+
+	<style type="text/css">
+		/* comentado para ejercicio de video
+		#primerParrafo{
+			background-color: #F00;
+		}
+		*/
+
+		/***************INICIA EL EJERCICIO DEL VIDEO********/
+		h1{
+			text-align: center;
+		}
+
+		div{
+			width: 15%;
+			margin: 0 100px;
+			float: left;
+			border: #F00 solid 2px;
+			padding: 10px;
+		}
+
+		table{
+			width: 100%;
+			margin-top: 10px;
+		}
+	</style>
+
+	<script type="text/javascript" src="Jquery/jquery-1.6.3.min.js"></script>
+
+	<script type="text/javascript">
+		$(document).ready(function(){
+
+			//Se pueden poner a la escucha con un array y un for
+			//document.getElementById("aumenta1").addEventListener("click", aumentar, false);
+
+			//Poner en escucha al boton disminir
+			/*document.getElementById("disminuye1").addEventListener("click", disminuir, false);
+
+			document.getElementById("aumenta2").addEventListener("click", aumentar, false);
+
+			document.getElementById("disminuye2").addEventListener("click", disminuir, false);
+
+			document.getElementById("aumenta3").addEventListener("click", aumentar, false);
+
+			document.getElementById("disminuye3").addEventListener("click", disminuir, false);*/
+
+
+			//Esto en caso de tener mil elementos con querySelectorAll, este selecciona toos los elementos con etiqueta input
+			//Botones es un array.
+			var botones = document.querySelectorAll("input")
+
+			//Recorrer array para poner botones a la escucha
+			for(var i = 0; i < botones.length; i++){
+				botones[i].addEventListener("click", aumentar, false)
+
+				botones[i].addEventListener("click", disminuir, false)
+			}
+
+			//Cada que se hace click ocurre un segundo proceso, se genera un objeto
+
+			//Con la propiedad target se que elemento desencadena el elemento.
+		});
+
+		//Pasarle el objeto del evento que se contruye de forma automática, se suele llamar e a los objetos de tipo eventos
+		function aumentar(e){
+			var zonaActuacion;
+
+			//Comparar que objeto desencadena el evento
+			if(e.target == aumenta1){
+				zonaActuacion = "#noticia1";
+			}else if(e.target == aumenta2){
+				zonaActuacion = "#noticia2";
+			}else if(e.target == aumenta3){
+				zonaActuacion = "#noticia3";
+			}
+
+			var tamDefecto = $(zonaActuacion).css("font-size");
+
+			tamDefecto=parseInt(tamDefecto);
+
+			$(zonaActuacion).css("font-size", tamDefecto * 1.1);
+		}
+
+		function disminuir(e){
+			var zonaActuacion;
+
+			//Comparar que objeto desencadena el evento
+			if(e.target == disminuye1){
+				zonaActuacion = "#noticia1";
+			}else if(e.target == disminuye2){
+				zonaActuacion = "#noticia2";
+			}else if(e.target == disminuye3){
+				zonaActuacion = "#noticia3";
+			}
+
+			var tamDefecto = $(zonaActuacion).css("font-size");
+
+			tamDefecto=parseInt(tamDefecto);
+
+			$(zonaActuacion).css("font-size", tamDefecto * 0.92);
+		}
+	</script>
+</head>
+<body>
+<h1>NOTICIAS</h1>
+<div id="noticia1">
+	Lorem ipsum dolor sit amet, consectetur adipisicing elit. Harum voluptatem rem aperiam excepturi pariatur amet ipsam esse. Neque hic numquam nihil debitis delectus commodi tempora totam rerum rem? Necessitatibus, itaque!
+	<table>
+		<tr>
+			<td style="text-align:left">
+				<input type="button" value="Aumentar" id="aumenta1">
+			</td>
+			<td style="text-align:right">
+				<input type="button" value="Disminuir" id="disminuye1">
+			</td>
+		</tr>
+	</table>
+</div>
+<div id="noticia2">
+	Lorem ipsum dolor sit amet, consectetur adipisicing elit. Harum voluptatem rem aperiam excepturi pariatur amet ipsam esse. Neque hic numquam nihil debitis delectus commodi tempora totam rerum rem? Necessitatibus, itaque!
+	<table>
+		<tr>
+			<td style="text-align:left">
+				<input type="button" value="Aumentar" id="aumenta2">
+			</td>
+			<td style="text-align:right">
+				<input type="button" value="Disminuir" id="disminuye2">
+			</td>
+		</tr>
+	</table>
+</div>
+<div id="noticia3">
+	Lorem ipsum dolor sit amet, consectetur adipisicing elit. Harum voluptatem rem aperiam excepturi pariatur amet ipsam esse. Neque hic numquam nihil debitis delectus commodi tempora totam rerum rem? Necessitatibus, itaque!
+	<table>
+		<tr>
+			<td style="text-align:left">
+				<input type="button" value="Aumentar" id="aumenta3">
+			</td>
+			<td style="text-align:right">
+				<input type="button" value="Disminuir" id="disminuye3">
+			</td>
+		</tr>
+	</table>
+</div>
+
+</body>
+</html>
