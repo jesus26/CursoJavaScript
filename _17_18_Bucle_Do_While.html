@@ -2,8 +2,8 @@
 <html lang="es">
 <head>
 	<meta charset="UTF-8">
-	<title>Bucle Do While</title>
-	<!-- El script está en el body para dibujar antes de comenzar a jugar-->
+	<title>17 y 18 - Control flujo. Bucle Do While</title>
+	<!-- El script está en el body para dibujar antes de comenzar a jugar -->
 </head>
 <body>
 	<table>
@@ -27,35 +27,36 @@
 
 		//Declarando contador.
 		var contador = 0;
+		
 		do{
 			contador++;
 			document.write(variable + "<br>");
 		}while(contador < 10);
 
-				//Declarando un array.
+		//Declarando un array.
 		var misFrutasFavoritas = ["Fresas", "Uvas", "Mangos", "Sandia", "Mandarinas"];
 
-		//Contador para el indice del array.
-		var contadorFrtas = 0;
+		//Contador para el índice del array.
+		var contadorFrutas = 0;
 
 		//Escribien salto de linea.
 		document.write("<br><br>");
 
 		//Recorriendo array con un ciclo do while
 		do{
-			document.write(misFrutasFavoritas[contadorFrtas] + ", ");
-			contadorFrtas++;
-		}while(contadorFrtas < misFrutasFavoritas.length);
+			document.write(misFrutasFavoritas[contadorFrutas] + ", ");
+			contadorFrutas++;
+		}while(contadorFrutas < misFrutasFavoritas.length);
 
 		//Declarando valor aleatorio utilizando math.
 		//El metodo round sirve para redondear un flotante.
 		var aleatorio = Math.round(Math.random() * 100);
 		//Para evitar que sea de 0 - 1 y mostrar de 0 - 100 lo multiplicamos por 100.
 
-		document.write(aleatorio);
+		document.write("<br>" + aleatorio);
 		
 		//Valor que ingresará el usuario.		
-		//var valorUsuario = parseInt(prompt("Introduce un número entre 0 y 100"));
+		var valorUsuario = parseInt(prompt("Introduce un número entre 0 y 100"));
 
 		//Contador de intentos para adivinar
 		var intentos = 0;
@@ -80,6 +81,7 @@
 			intentosConsumidos.style.color = "red";
 			intentosConsumidos.style.textAlign = "Center";
 
+			alert(aleatorio);
 			valorUsuario = parseInt(prompt("Introduce un número"));
 
 		}while(valorUsuario != aleatorio);
@@ -87,8 +89,6 @@
 		mensaje.value = "Lo has conseguido";
 		mensaje.style.color = "green";
 		mensaje.style.fontSize = "18px";
-
-
 	</script>
 </body>
 </html>

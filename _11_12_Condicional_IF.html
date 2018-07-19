@@ -2,7 +2,7 @@
 <html lang="es">
 <head>
 	<meta charset="UTF-8">
-	<title>Estructurasde flujo, condicionales, bucles I,II y III</title>
+	<title>11 y 12 - Control flujo. Condicional IF I</title>
 	<style>
 		table{
 			margin: auto;
@@ -10,8 +10,8 @@
 	</style>
 	<script type="text/javascript">
 		/*Operadores de comparación
-		=== estrictamente igual comparando tipos,
-		!== estrictamente diferente con tipos.
+		=== estrictamente igual comparando el tipo de dato,
+		!== estrictamente diferente incluyendo el tipo de dato.
 		*/
 		var precioCoche = 250000;
 
@@ -37,7 +37,6 @@
 				<input type="text" name="textfield" id="textfield">
 			</td>
 		</tr>
-
 		<tr>
 			<td>
 				Apellidos::
@@ -47,7 +46,6 @@
 				<input type="text" name="textfield2" id="textfield2">
 			</td>
 		</tr>
-
 		<tr>
 			<td>
 				Edad:
@@ -57,7 +55,6 @@
 				<input type="text" name="textfield3" id="textfield3">
 			</td>
 		</tr>
-
 		<tr>
 			<td>
 				Carnet:
@@ -67,7 +64,6 @@
 				<input type="text" name="textfield4" id="textfield"4>
 			</td>
 		</tr>
-
 		<tr>
 			<td>
 				<input type="submit" name="button" id="button" value="Enviar">
@@ -78,11 +74,12 @@
 		</tr>
 	</table>
 
-	<!-- Se crea el JavaScript aquí para casos de mantenimiento, no puede leer el documento algo que no ha pasado-->
+	<!-- Se crea el JavaScript aquí para casos de mantenimiento, no puede leer 
+		el documento algo que no ha pasado(en este caso el mapeo de elementos) -->
 	<script>
 		var cuerpo = document.getElementById("cuerpo");
 
-		var colorWeb=prompt("Introduce un color [Rojo | Verde | Azul]").toLowerCase();
+		var colorWeb = prompt("Introduce un color [Rojo | Verde | Azul]").toLowerCase();
 
 		if(colorWeb == "rojo"){
 			cuerpo.style.background = "red";
@@ -91,7 +88,7 @@
 		}else if(colorWeb == "azul"){
 			cuerpo.style.background = "blue";
 		}else{
-			alert("Los colores disponibles son; rojo, verde y azul");
+			alert("Los colores disponibles son: rojo, verde y azul");
 		}
 	</script>
 </body>

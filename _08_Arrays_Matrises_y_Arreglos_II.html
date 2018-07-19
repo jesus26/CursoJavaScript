@@ -2,7 +2,7 @@
 <html lang="es">
 <head>
 	<meta charset="UTF-8">
-	<title>Arrays</title>
+	<title>08 - Sintaxis Básica V - Arrays, Matrices, Arreglos II</title>
 	<script type="text/javascript">
 		var articulos = ["Mouse","CPU","Keyword","Screen"];
 		var juguetes = new Array("Trompo","Canicas","Yoyo","Loteria");
@@ -11,13 +11,16 @@
 		var vacio = [];
 
 		/*Para agregar un elemento al array*/
-		/*artitulos.push("nombreArticulo"), el push agrega el elemento al final del array, se pueden agregar en conjunto por ejemeplo articulos.push("proyector","celular","laptop")*/
+		/*artitulos.push("nombreArticulo"), el push agrega el elemento al final 
+		del array, se pueden agregar en conjunto por ejemeplo:
+			articulos.push("proyector","celular","laptop")*/
 
-		/*articulos.unshift("futbol"), el unshift agrega un elemento al principio del array*/
+		/*articulos.unshift("futbol"), el unshift agrega un elemento al principio 
+		del array*/
 
 		/*Para eliminar elementos del array*/
-		/*articulos.pop(), eleiminar el elemento del final*/
-		/*articulos.shift(), eleiminar el elemento del inicio*/
+		/*articulos.pop(), eliminar el elemento del final*/
+		/*articulos.shift(), eliminar el elemento del inicio*/
 	</script>
 </head>
 <body>
@@ -37,8 +40,9 @@
 		document.write("<p>Ya agregamos otro juguete al final y es <strong>");
 		document.write(juguetes[juguetes.length - 1]);
 		document.write("</strong></p>");
+		
 		/*
-		//Agregar un elelemnto por el usuario
+		//Agregar un elemento por el usuario
 		articulos.push(prompt("Introduce otro elemento para el final"));
 		document.write("<p>Ya agregaste otro articulo al final y es <strong>");
 		document.write(articulos[articulos.length - 1]);
@@ -51,24 +55,24 @@
 
 		//Borrar el primer elemento
 		juguetes.shift();
-		document.write("<p>Ahora que se ha borrado un elemento, el primer juguete es <strong>");
+		document.write("<p>Se ha borrado un elemento, el primer juguete es <strong>");
 		document.write(juguetes[0]);
 		document.write("</strong></p>");
 		
 		//Borrar el último elemento
 		juguetes.pop();
-		document.write("<p>Ahora que se ha borrado el último elemento, el último juguete es <strong>");
+		document.write("<p>Se ha borrado el último elemento, el último juguete es <strong>");
 		document.write(juguetes[juguetes.length-1]);
 		document.write("</strong></p>");
 
-		
-		//Eliminar un elemento pasando el indice, con splice, le damos el indice de donde queremos que comience a borrar y le decimos cuantos elementos debe borrar
+		/*Eliminar un elemento pasando el índice, con splice, le damos el indice de donde 
+		queremos que comience a borrar y le decimos cuantos elementos debe borrar*/
 		juguetes.splice(0,1);
 
-		document.write("<p>Ahora que se ha borrado el primer elemento pasando el indice, el primer juguete es <strong>");
+		document.write("<p>Se ha borrado el primer elemento pasando el indice, " +
+			"el primer juguete es <strong>");
 		document.write(juguetes[0]);
 		document.write("</strong></p>");
-		
 		
 		document.write("<p>Ahora es momento de ordenar de forma ascendente: <strong>");
 		//Ordenar array de forma ascendente
@@ -82,6 +86,7 @@
 		document.write("<p>El turno de ordenar de forma descendente: <strong>");
 		//Ordenar array de forma ascendente
 		juguetes.sort();
+		//
 		juguetes.reverse();
 		for(var i = 0; i <= (juguetes.length - 1); i++){
 			document.write(juguetes[i] + ", ");
@@ -110,7 +115,8 @@
 		}
 		document.write("</strong></p>");
 
-		//Para sacar el menor o el mayor es necesario ordenar antes, por ejemplo si se desea el mayor se ordena y se obtiene el primero o el último según sea el caso.
+		/*Para sacar el menor o el mayor es necesario ordenar antes, por ejemplo si se 
+		desea el mayor se ordena y se obtiene el primero o el último según sea el caso.*/
 	</script>
 </body>
 </html>

@@ -2,7 +2,7 @@
 <html lang="es">
 <head>
 	<meta charset="UTF-8">
-	<title>Ejercicio de video 13 y 14</title>
+	<title>13 y 14 - Control flujo. Condicional IF II</title>
 
 	<script>
 	//Convertir de string a entero
@@ -14,17 +14,18 @@
 
 		//Saber si los números ingresados son numericos.
 		if(!isNaN(numero1) && !isNaN(numero2)){
-			var operacion = prompt("Elige una operacion (Suma, Resta, Multiplicación, División)").toLowerCase();
+			var operacion = prompt("Elige una operacion:" +
+					" [Suma(s), Resta(r), Multiplicación(m), División(d))").toLowerCase();
 
 			var resultado;
 
-			if(operacion == "suma"){
+			if(operacion == "s"){
 				resultado = numero1 + numero2;
-			}else if(operacion == "resta"){
+			}else if(operacion == "r"){
 				resultado = numero1 - numero2;
-			}else if(operacion == "multiplicacion" || operacion == "multiplicación"){
+			}else if(operacion == "m"){
 				resultado = numero1 * numero2;
-			}else if(operacion == "division" || operacion == "división"){
+			}else if(operacion == "d"){
 				resultado = numero1 / numero2;
 			}else{
 				resultado = "No valido";
@@ -33,8 +34,7 @@
 			alert("El resultado es " + resultado);
 		}else{
 			alert("No se pueden operar los valores ingresados");
-		}
-		
+		}	
 	</script>
 </head>
 <body>

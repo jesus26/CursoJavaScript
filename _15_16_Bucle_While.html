@@ -2,7 +2,7 @@
 <html lang="es">
 <head>
 	<meta charset="UTF-8">
-	<title>Bucle While</title>
+	<title>15 y 16 - Control flujo. Bucle While</title>
 
 	<script type="text/javascript">
 		//Declarando variable
@@ -20,8 +20,9 @@
 			contador++;
 		}
 
-		document.write("<br><br>" + "*********RECORRER ARRAY CON CICLO WHILE********<br>");
-		var miArray = ["Jesus", "Otoniel", "Fredy", "Martin", "Fabiola", "Eberardo", "Candelaria", "Cristobal"];
+		document.write("<br><br>" + "***RECORRER ARRAY CON CICLO WHILE***<br>");
+		var miArray = ["Jesus", "Otoniel", "Fredy", "Martin", "Fabiola", "Eberardo", 
+			"Candelaria", "Cristobal"];
 
 		var contadorArray = 0;
 		while(contadorArray < miArray.length){
@@ -34,12 +35,13 @@
 		var passwordIngresada = prompt("Ingresa tu contraseña", "Ingresa contraseña");
 
 		while(password != passwordIngresada){
-			//El segundo parametro funciona para Internet explorer, con eso se evita que salga undefined como valor por default
-			passwordIngresada = prompt("Error, Ingresa tu contraseña de nuevo", "Ingres contraseña");					
+			/*El segundo parametro funciona para Internet explorer, con eso se evita 
+			que salga undefined como valor por default*/
+			passwordIngresada = prompt("Error, Ingresa tu contraseña de nuevo", 
+				"Ingresa contraseña");	
 		}
 
 		document.write("<br><br>Has accedido al sistema");
-
 	</script>
 </head>
 <body>
