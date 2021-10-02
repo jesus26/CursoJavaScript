@@ -1,0 +1,1 @@
+Cuando haya un error y por ejemplo no se muestre nada en la web se puede abrir la consola del navegador para saber la causa
