@@ -3,31 +3,31 @@
 
 <head>
 	<meta charset="UTF-8">
-	<title>11 y 12 - Control flujo. Condicional IF I</title>
+	<title>11 y 12 - Control flujo Condicional If I</title>
 	<style>
 		table {
-			margin: auto;
 			/*Centrar tabla*/
+			margin: auto;
 		}
 	</style>
 	<script type="text/javascript">
 		/*
 		Estructuras de control de flujo
 			Código que modifica el flujo de ejecución del programa, es decir en lugar de que vaya de arriba a abajo
-			línea por línea se cambia de una línea a otra situada en cualquier parte delcódigo
+			línea por línea se cambia de una línea a otra situada en cualquier parte del código
 
 		Condicionles
-			Sirven para elegir una opción de dos o más opciones, ej: si el usuario no ha rellenado un campo obligatorio
-			del formulario entonce no podrá envierlo.
+			Sirven para elegir una opción de entre dos o más opciones, ej: si el usuario no ha rellenado un campo obligatorio
+			del formulario entonce no podrá enviarlo.
 
-		Operadores de comparación
+		Operadores de comparación estrictos
 		=== estrictamente igual comparando el tipo de dato.
 		!== estrictamente diferente incluyendo el tipo de dato.
 		
 		&& - sirve para unir dos condiciones donde las 2 deben ser verdaderas para entrar a ese flujo
 		|| - sirve para unir dos condiciones donde una u otra debe ser verdadera para entrar a ese flujo
 		NOTA: Esto funciona unicamente cuando se ejecutará el mismo flujo para todas las condiciones, de lo contrario
-		se necesitan condicionales anidados, ej: el ejemplo para cambiar elcolor del body que está abajo
+		se necesitan condicionales anidados, ej: el ejemplo para cambiar el color del body que está abajo
 		*/
 		var precioCoche = 80000;
 
@@ -38,7 +38,7 @@
 		if (dineroAhorrado >= precioCoche && edad >= 18) {
 			alert("Puedes comprar el coche");
 		} else {
-			alert("Aún no puedes comprar el coche, pero seguro pronto lo harás!");
+			alert("Aún no puedes comprar el coche, pero seguro pronto podrás!");
 		}
 	</script>
 </head>
@@ -95,6 +95,7 @@
 	<!-- Se crea el JavaScript aquí para casos de mantenimiento, no puede leer el documento algo que no ha
 		pasado (en este caso el mapeo de elementos) -->
 	<script>
+		//Guardando body
 		var cuerpo = document.getElementById("cuerpo");
 
 		//Es lo mismo poner el toLowerCase() en cada condición o directamente en el texto que se introduce

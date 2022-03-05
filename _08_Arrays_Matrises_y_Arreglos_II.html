@@ -56,13 +56,13 @@
 
 		//Borrar el primer elemento
 		juguetes.shift();
-		document.write("<p>Se ha borrado un elemento, el primer juguete es <strong>");
+		document.write("<p>Se ha borrado un elemento, ahora el primer juguete es <strong>");
 		document.write(juguetes[0]);
 		document.write("</strong></p>");
 
 		//Borrar el último elemento
 		juguetes.pop();
-		document.write("<p>Se ha borrado el último elemento, el último juguete es <strong>");
+		document.write("<p>Se ha borrado el último elemento, ahora el último juguete es <strong>");
 		document.write(juguetes[juguetes.length - 1]);
 		document.write("</strong></p>");
 
@@ -71,7 +71,7 @@
 		juguetes.splice(0, 1);
 
 		document.write("<p>Se ha borrado el primer elemento pasando el indice, " +
-			"el primer juguete es <strong>");
+			"ahora el primer juguete es <strong>");
 		document.write(juguetes[0]);
 		document.write("</strong></p>");
 
@@ -83,7 +83,7 @@
 		}
 		document.write("</strong></p>");
 
-		document.write("<p>El turno de ordenar de forma descendente: <strong>");
+		document.write("<p>Es turno de ordenar de forma descendente: <strong>");
 		//Ordenar array de forma ascendente
 		juguetes.sort();
 		//Cambiar orden del array
